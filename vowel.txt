@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char c;
+    int lowercase_vowel, uppercase_vowel;
+
+    printf("Enter an alphabet: ");
+    scanf("%c", &c);
+
+    // evaluates to 1 (true) if c is a lowercase vowel
+    lowercase_vowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+
+    // evaluates to 1 (true) if c is an uppercase vowel
+    uppercase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+
+    // Show error message if it's not an alphabet
+    if (!isalpha(c)) {
+        printf("Error! Non-alphabetic character detected.\n");
+    } 
+    else if (lowercase_vowel || uppercase_vowel) {
+        printf("%c is a vowel.\n", c);
+    } 
+    else {
+        printf("%c is a consonant.\n", c);
+    }
+
+    return 0;
+}
