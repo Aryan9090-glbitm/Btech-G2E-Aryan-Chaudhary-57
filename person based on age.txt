@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    // Get user input
+    printf("Enter the person's age: ");
+    if (scanf("%d", &age) != 1) {
+        printf("Invalid input. Please enter a number.\n");
+        return 1;
+    }
+
+    // Categorization Logic
+    if (age < 0) {
+        printf("Age cannot be negative.\n");
+    } else if (age <= 12) {
+        printf("Category: Child\n");
+    } else if (age <= 17) {
+        printf("Category: Teen\n");
+    } else if (age <= 60) {
+        printf("Category: Adult\n");
+    } else {
+        printf("Category: Senior Citizen\n");
+    }
+
+    return 0;
+}
